@@ -1,0 +1,50 @@
+@mixin titles-style-xs {
+    font-family: $titles_fonts;
+    font-size: 2rem;
+    font-weight: normal;
+    letter-spacing: 0;
+  }
+
+%svg {
+    position: absolute;
+    width: 100%;
+    height: 5vh;
+}
+
+%buttons {
+    font-family: $texts_fonts;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    color: $font-color;
+    background: $buttons-color;
+    height: 3rem;
+    border: inherit;
+    cursor: pointer;
+    margin: 1rem;
+    &:hover{
+        background: $hover-color;
+        color: $primary-color;
+    }
+}
+
+
+
+$breakpoint-lg: 1120px;
+$breakpoint-md: 760px;
+$breakpoint-sm: 600px;
+
+@mixin respond-to($medias...) {
+    @each $media in $medias {
+        @if $media == desktop-screen {
+            @media screen and (min-width: $breakpoint-lg) { @content; }
+        }
+        @else if $media == tablet-screen {
+            @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) { @content; }
+        }
+        @else if $media == mobile-screen {
+            @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) { @content; }
+        }
+    }
+}
