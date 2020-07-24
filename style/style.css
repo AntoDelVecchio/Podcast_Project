@@ -32,9 +32,21 @@ body .site_presentation button:hover, body .news .btn button:hover {
 
 body {
   background: #FFFFFF;
+  /* comienzo header */
+  /* fin de menu hamburguesa y barra de navegación */
+  /* comienzo seccion main*/
+  /* fin de presentacion del sitio */
+  /* fin de seccion episodios */
+  /* fin de seccion about us */
+  /* fin de seccion invitados */
+  /* fin de seccion temas */
+  /* fin seccion main */
+  /* comienzo footer */
+  /* fin seccion novedades */
+  /* fin de redes y copyright */
+  /* fin del footer */
 }
 
-/* comienzo de menu hamburguesa y barra de navegación */
 body header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -181,6 +193,12 @@ body header .menu ul {
   }
 }
 
+@media (min-width: 600px) and (max-width: 760px) {
+  body header .menu ul {
+    text-align: center;
+  }
+}
+
 body header .menu ul li {
   padding: 1rem 0 1.5rem 0;
 }
@@ -190,6 +208,10 @@ body header .menu ul a {
   color: #FFFFFF;
   text-transform: uppercase;
   text-align: left;
+}
+
+body header .menu ul a:hover {
+  text-decoration: line-through;
 }
 
 @media screen and (min-width: 1120px) {
@@ -223,10 +245,7 @@ body header .menu ul a {
     text-decoration: line-through;
   }
 }
-  /* fin de menu hamburguesa y barra de navegación */
 
-
-  /* comienzo seccion main*/
 body .site_presentation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -349,8 +368,6 @@ body .site_presentation .desktop_presentation {
     width: 20rem;
   }
 }
-/* fin de presentacion del sitio */
-
 
 body .episodes {
   position: relative;
@@ -451,8 +468,6 @@ body .episodes .container div iframe {
     padding-left: 2rem;
   }
 }
-  /* fin de seccion episodios */
-
 
 @media screen and (min-width: 1120px) {
   body .about_us {
@@ -581,8 +596,6 @@ body .about_us article p {
     line-height: 3vw;
   }
 }
- /* fin de seccion about us */
- 
 
 @media screen and (min-width: 1120px) {
   body .guests {
@@ -665,9 +678,6 @@ body .guests div img {
     width: 100%;
   }
 }
-
- /* fin de seccion invitados */
-
 
 body .topics h2 {
   font-family: "IBM Plex Sans", sans-serif;
@@ -773,12 +783,6 @@ body .topics article div h4 {
   margin: 1rem 0 2rem 0;
 }
 
-  /* fin de seccion temas */
-
-  /* fin seccion main */
-  
-
-  /* comienzo footer */
 body .news {
   position: relative;
   height: 100%;
@@ -853,9 +857,6 @@ body .news .btn button {
     width: 50%;
   }
 }
- 
-/* fin seccion novedades */
-  
 
 body .networks {
   display: -webkit-box;
@@ -954,10 +955,4 @@ body .networks a > i {
 body .networks a > i:hover {
   color: #00F3BB;
 }
-
-  /* fin de redes y copyright */
-
-  
-  /* fin del footer */
-
 /*# sourceMappingURL=style.css.map */

@@ -98,6 +98,9 @@ body{
                     background: $primary-color;
                     border-bottom: 1px solid $buttons-color;
                 }
+                @include respond-to(mobile-screen) {
+                    text-align: center;
+                }
                 li{
                     padding: 1rem 0 1.5rem 0;
                 }
@@ -106,6 +109,9 @@ body{
                     color: $primary-color;
                     text-transform: uppercase;
                     text-align: left;
+                    &:hover{
+                        text-decoration: line-through;
+                    }
                     @include respond-to(desktop-screen, tablet-screen) {
                         padding: 1.5rem;
                         color: $font-color;
