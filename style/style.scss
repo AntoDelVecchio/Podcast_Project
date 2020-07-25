@@ -200,13 +200,16 @@ body{
             }
         }
         button{
-            @extend %buttons;
+            @extend %button-style;
             @include respond-to(desktop-screen) {
                 width: 14rem;
                 margin-top: 3.5rem;
             }
             @include respond-to(tablet-screen, mobile-screen) {
                 width: 20rem;
+            }
+            a{
+                @extend %button-link
             }
         } 
     }                      /* fin de presentacion del sitio */ 
@@ -493,13 +496,16 @@ body{
                 transform: translate(0, 140%);
             }
             button{
-                @extend %buttons;
+                @extend %button-style;
                 width: 90%;
                 @include respond-to(desktop-screen) {
                     width: 20%;
                 }
                 @include respond-to(tablet-screen) {
                     width: 50%;
+                }
+                a{
+                    @extend %button-link
                 }
             }
         }

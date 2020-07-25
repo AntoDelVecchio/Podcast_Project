@@ -7,12 +7,6 @@ body .episodes .svg1, body .episodes .svg2, body .news .svg1 {
 }
 
 body .site_presentation button, body .news .btn button {
-  font-family: "IBM Plex Mono", monospace;
-  text-transform: uppercase;
-  font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: 0;
-  color: #060A24;
   background: #00F3BB;
   height: 3rem;
   border: inherit;
@@ -22,6 +16,19 @@ body .site_presentation button, body .news .btn button {
 
 body .site_presentation button:hover, body .news .btn button:hover {
   background: linear-gradient(225deg, #0000FE 5%, #00F0B8 100%);
+}
+
+body .site_presentation button a, body .news .btn button a {
+  color: #060A24;
+  text-decoration: none;
+  font-family: "IBM Plex Mono", monospace;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+body .site_presentation button a:hover, body .news .btn button a:hover {
   color: #FFFFFF;
 }
 
