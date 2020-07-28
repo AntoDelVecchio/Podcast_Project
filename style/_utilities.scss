@@ -11,26 +11,20 @@
     height: 5vh;
 }
 
-%button-style {
-    background: $buttons-color;
+%button {
+    font-family: $texts_fonts;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    color: $font-color;
+    background: $button-color;
     height: 3rem;
     border: inherit;
     cursor: pointer;
     margin: 1rem;
     &:hover{
         background: $hover-color;
-    }
-}
-
-%button-link {
-    color: $font-color;
-    text-decoration: none;
-    font-family: $texts_fonts;
-    text-transform: uppercase;
-    font-size: 1rem;
-    font-weight: 500;
-    letter-spacing: 0;
-    &:hover{
         color: $primary-color;
     }
 }

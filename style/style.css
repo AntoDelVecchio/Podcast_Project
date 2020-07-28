@@ -6,7 +6,13 @@ body .episodes .svg1, body .episodes .svg2, body .news .svg1 {
   height: 5vh;
 }
 
-body .site_presentation button, body .news .btn button {
+body .site_presentation button, body .news .btn_footer button {
+  font-family: "IBM Plex Mono", monospace;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: #060A24;
   background: #00F3BB;
   height: 3rem;
   border: inherit;
@@ -14,21 +20,8 @@ body .site_presentation button, body .news .btn button {
   margin: 1rem;
 }
 
-body .site_presentation button:hover, body .news .btn button:hover {
+body .site_presentation button:hover, body .news .btn_footer button:hover {
   background: linear-gradient(225deg, #0000FE 5%, #00F0B8 100%);
-}
-
-body .site_presentation button a, body .news .btn button a {
-  color: #060A24;
-  text-decoration: none;
-  font-family: "IBM Plex Mono", monospace;
-  text-transform: uppercase;
-  font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: 0;
-}
-
-body .site_presentation button a:hover, body .news .btn button a:hover {
   color: #FFFFFF;
 }
 
@@ -588,19 +581,12 @@ body .about_us article p {
   color: #060A24;
   letter-spacing: 0;
   padding-bottom: 1rem;
-  line-height: 3vh;
+  line-height: 1.5rem;
 }
 
 @media screen and (min-width: 1120px) {
   body .about_us article p {
     font-size: 1rem;
-    line-height: 1.5vw;
-  }
-}
-
-@media (min-width: 760px) and (max-width: 1120px) {
-  body .about_us article p {
-    line-height: 3vw;
   }
 }
 
@@ -817,7 +803,7 @@ body .news h2 {
   letter-spacing: 0;
   color: #FFFFFF;
   text-align: center;
-  line-height: 5vh;
+  line-height: 3rem;
   padding: 4rem 2rem 1rem;
 }
 
@@ -829,7 +815,7 @@ body .news h2 {
   }
 }
 
-body .news .btn {
+body .news .btn_footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -842,25 +828,25 @@ body .news .btn {
 }
 
 @media screen and (min-width: 1120px) {
-  body .news .btn {
+  body .news .btn_footer {
     width: 100%;
     -webkit-transform: translate(0, 140%);
             transform: translate(0, 140%);
   }
 }
 
-body .news .btn button {
+body .news .btn_footer button {
   width: 90%;
 }
 
 @media screen and (min-width: 1120px) {
-  body .news .btn button {
+  body .news .btn_footer button {
     width: 20%;
   }
 }
 
 @media (min-width: 760px) and (max-width: 1120px) {
-  body .news .btn button {
+  body .news .btn_footer button {
     width: 50%;
   }
 }

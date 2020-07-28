@@ -96,7 +96,7 @@ body{
                     text-align: center;
                     margin: 0 10rem;
                     background: $primary-color;
-                    border-bottom: 1px solid $buttons-color;
+                    border-bottom: 1px solid $button-color;
                 }
                 @include respond-to(mobile-screen) {
                     text-align: center;
@@ -116,7 +116,7 @@ body{
                         padding: 1.5rem;
                         color: $font-color;
                         &:hover{
-                            color: $buttons-color;
+                            color: $button-color;
                             text-decoration: line-through;
                         }
                         &:active{
@@ -200,16 +200,13 @@ body{
             }
         }
         button{
-            @extend %button-style;
+            @extend %button;
             @include respond-to(desktop-screen) {
                 width: 14rem;
                 margin-top: 3.5rem;
             }
             @include respond-to(tablet-screen, mobile-screen) {
                 width: 20rem;
-            }
-            a{
-                @extend %button-link
             }
         } 
     }                      /* fin de presentacion del sitio */ 
@@ -338,13 +335,9 @@ body{
                 color: $font-color;
                 letter-spacing: 0;
                 padding-bottom: 1rem;
-                line-height: 3vh;
+                line-height: 1.5rem;
                 @include respond-to(desktop-screen) {
                     font-size: 1rem;
-                    line-height: 1.5vw;
-                }
-                @include respond-to(tablet-screen) {
-                    line-height: 3vw;
                 }
             }
         }
@@ -480,14 +473,14 @@ body{
             @include titles-style-xs;
             color: $primary-color;
             text-align: center;
-            line-height: 5vh;
+            line-height: 3rem;
             padding: 4rem 2rem 1rem;
             @include respond-to(desktop-screen) {
                 font-size: 3rem;
                 transform: translate(0, 70%);
             }
         }
-        .btn{
+        .btn_footer{
             display: flex;
             justify-content: center;
             align-items: center;
@@ -496,16 +489,13 @@ body{
                 transform: translate(0, 140%);
             }
             button{
-                @extend %button-style;
+                @extend %button;
                 width: 90%;
                 @include respond-to(desktop-screen) {
                     width: 20%;
                 }
                 @include respond-to(tablet-screen) {
                     width: 50%;
-                }
-                a{
-                    @extend %button-link
                 }
             }
         }
@@ -558,7 +548,7 @@ body{
         a > i{
             color: $font-color;
             &:hover{
-                color: $buttons-color;
+                color: $button-color;
             }
         }
 
