@@ -491,7 +491,7 @@ body{
         .svg1{
             @extend %svg;
             @include respond-to(desktop-screen) {
-                height: 10vh;
+                height: 7rem;
             }
         }
         h2{
