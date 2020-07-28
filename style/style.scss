@@ -12,20 +12,22 @@ body{
     background: $primary-color;
 
  /* comienzo header */
-    header{
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
+    .nav_bar{
+        background-color: $bg-nav-color;
         position: fixed;
-        top: 0;
-        background: $bg-nav-color;
+        width: 100%;
         z-index: 2000;
         @include respond-to(desktop-screen, tablet-screen) {
             position: relative;
         }
+        @include respond-to(desktop-screen) {
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
+        }
         img{
+            float: left;
+            display: block;
             padding: 0.6rem 1rem 1rem;
             @include respond-to(desktop-screen) {
                 margin-left: 5rem;
@@ -39,82 +41,105 @@ body{
         }
     
         /* comienzo menu hambuerguesa y barra de navegacion */
-        input{
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            opacity: 0;
-            &:checked ~ nav{
-                display: block;
+        .menu-btn{
+            display: none;
+            &:checked ~ .menu ul{
+                max-height: 15rem;
             }
-            &:checked ~ .fa-bars{
-                display: none;
+            &:checked ~ .menu-icon .nav-icon{
+                background: transparent;
             }
-            &:not(:checked) ~ .fa-times{
-                display: none;
-            } 
-            @include respond-to(desktop-screen) {
-                display: none;
+            &:checked ~ .menu-icon .nav-icon:before{
+                transform: rotate(-45deg);
+                top: 0;
             }
-            @include respond-to(tablet-screen) {
-                right: 3rem;
-                top: 1.5rem;
+            &:checked ~ .menu-icon .nav-icon:after{
+                transform: rotate(45deg);
+                top: 0;
             }
         }
-        .fa-bars, .fa-times{
-            padding: 0.5rem 1rem 1rem;
+        .menu-icon{
+            padding: 1.5rem;
+            position: relative;
+            float: right;
             cursor: pointer;
-            font-size: larger;
-            font-weight: 600;
-            @include respond-to(desktop-screen) {
+            @include respond-to(desktop-screen){
                 display: none;
             }
             @include respond-to(tablet-screen) {
-                padding: 0.5rem 3rem 1rem;
+                padding: 2.3rem 3rem;
+            }
+            .nav-icon{
+                background: $font-color;
+                display: block;
+                height: 2px;
+                width: 1.2rem;
+                position: relative;
+                transition: background 1s ease-out;
+                &:before{
+                    @extend %menu-hamburguesa;
+                    top: 5px;
+                }
+                &:after{
+                    @extend %menu-hamburguesa;
+                    top: -5px;
+                }
+                @include respond-to(tablet-screen) {
+                    width: 1.5rem;
+                }
             }
         }
         .menu{
-            cursor: pointer;
-            display: none;
-            width: 100%;
-            font-family: $texts_fonts;
+            clear: both;
             @include respond-to(desktop-screen) {
-                display: inline-block;
-                width: 55%;
+                margin: 1rem 5rem 0 0;
             }
             ul{
+                margin: 0;
+                padding: 0;
                 list-style: none;
-                background: $secondary-color;
-                padding: 0 1rem;
-                @include respond-to(desktop-screen){
-                    display: flex;
-                    justify-content: flex-end;
+                overflow: hidden;
+                background-color: $secondary-color;
+                max-height: 0;
+                transition: max-height 1s ease-out;
+                @include respond-to(desktop-screen) {
+                    clear: none;
+                    float: right;
+                    max-height: none;
                     background: none;
-                    margin: 0 5rem 0 0;
                 }
                 @include respond-to(tablet-screen) {
                     text-align: center;
-                    margin: 0 10rem;
                     background: $primary-color;
-                    border-bottom: 1px solid $button-color;
+                    margin: 0 10rem;
                 }
                 @include respond-to(mobile-screen) {
                     text-align: center;
                 }
                 li{
-                    padding: 1rem 0 1.5rem 0;
+                    @include respond-to(desktop-screen) {
+                        float: left;
+                    }
+                    @include respond-to(tablet-screen) {
+                        &:last-child{
+                            border-bottom: 1px solid $button-color;
+                        }
+                    }
                 }
                 a{
-                    text-decoration: none;
                     color: $primary-color;
+                    display: block;
+                    padding: 1rem;
+                    font-family: $texts_fonts;
+                    font-size: 1rem;
+                    text-decoration: none;
                     text-transform: uppercase;
-                    text-align: left;
                     &:hover{
                         text-decoration: line-through;
                     }
                     @include respond-to(desktop-screen, tablet-screen) {
-                        padding: 1.5rem;
                         color: $font-color;
+                        padding: 1rem; 
                         &:hover{
                             color: $button-color;
                             text-decoration: line-through;
@@ -137,7 +162,7 @@ body{
         flex-direction: column;
         justify-content: start;
         @include respond-to(desktop-screen) {
-            margin: 3rem 9rem;
+            margin: 1rem 9rem;
         }
         @include respond-to(tablet-screen) {
             margin: 2rem 3rem;
@@ -247,12 +272,12 @@ body{
                 padding: 4rem 1rem 1.3rem;
                 @include respond-to(desktop-screen) {
                     grid-column: x0 /x2;
-                    padding: 8rem 0 3rem 12rem;
+                    padding: 8rem 0 3rem 10rem;
                     font-size: 3rem;
                 }
                 @include respond-to(tablet-screen) {
                     font-size: 2.5rem;
-                    padding: 9rem 2rem 2rem;
+                    padding: 9rem 3.5rem 2rem;
                 }
             }
             div{
@@ -365,12 +390,12 @@ body{
             @include respond-to(desktop-screen) {
                 grid-column: x0 /x3;
                 font-size: 3rem;
-                padding: 5rem 0 3rem 12rem;
+                padding: 5rem 0 3rem 10rem;
             }
             @include respond-to(tablet-screen) {
                 grid-column: x0 /x2;
                 font-size: 2.5rem;
-                padding: 2rem;
+                padding: 2rem 3.5rem;
             }
         }
         div{
@@ -397,11 +422,11 @@ body{
             margin-top: 2rem;
             @include respond-to(desktop-screen) {
                 font-size: 3rem;
-                padding: 5rem 0 1rem 12rem;
+                padding: 5rem 0 1rem 10rem;
             }
             @include respond-to(tablet-screen) {
                 font-size: 2.5rem;
-                padding: 2rem;
+                padding: 2rem 3.5rem;
             }
         }
         article{

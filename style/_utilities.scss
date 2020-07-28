@@ -29,6 +29,16 @@
     }
 }
 
+%menu-hamburguesa {
+    background: $font-color;
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: all 1s ease-out;
+}
+
 
 
 $breakpoint-lg: 1120px;
