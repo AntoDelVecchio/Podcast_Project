@@ -3,7 +3,7 @@
 body .episodes .svg1, body .episodes .svg2, body .news .svg1 {
   position: absolute;
   width: 100%;
-  height: 5vh;
+  height: 3rem;
 }
 
 body .site_presentation button, body .news .btn_footer button {
@@ -418,13 +418,13 @@ body .episodes .svg1 {
 
 @media screen and (min-width: 1120px) {
   body .episodes .svg1 {
-    height: 10vh;
+    height: 7rem;
   }
 }
 
 @media (min-width: 760px) and (max-width: 1120px) {
   body .episodes .svg1 {
-    height: 10vh;
+    height: 7rem;
   }
 }
 
@@ -434,13 +434,13 @@ body .episodes .svg2 {
 
 @media screen and (min-width: 1120px) {
   body .episodes .svg2 {
-    height: 10vh;
+    height: 7rem;
   }
 }
 
 @media (min-width: 760px) and (max-width: 1120px) {
   body .episodes .svg2 {
-    height: 10vh;
+    height: 7rem;
   }
 }
 
@@ -466,13 +466,13 @@ body .episodes .container h2 {
   font-weight: normal;
   color: #FFFFFF;
   margin: 0;
-  padding: 4rem 1rem 1.3rem;
+  padding: 5rem 1rem 1.3rem;
 }
 
 @media screen and (min-width: 1120px) {
   body .episodes .container h2 {
     grid-column: x0 /x2;
-    padding: 8rem 0 3rem 10rem;
+    padding: 10rem 0 3rem 10rem;
     font-size: 3rem;
   }
 }

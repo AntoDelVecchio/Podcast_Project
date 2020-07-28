@@ -245,14 +245,14 @@ body{
             @extend %svg;
             top: 0;
             @include respond-to(desktop-screen, tablet-screen) {
-                height: 10vh;
+                height: 7rem;
             }
         }
         .svg2{
             @extend %svg;
             bottom: 0;
             @include respond-to(desktop-screen, tablet-screen) {
-                height: 10vh;
+                height: 7rem;
             }
         }
         .container{
@@ -269,10 +269,10 @@ body{
                 font-weight: normal;
                 color: $primary-color;
                 margin: 0;
-                padding: 4rem 1rem 1.3rem;
+                padding: 5rem 1rem 1.3rem;
                 @include respond-to(desktop-screen) {
                     grid-column: x0 /x2;
-                    padding: 8rem 0 3rem 10rem;
+                    padding: 10rem 0 3rem 10rem;
                     font-size: 3rem;
                 }
                 @include respond-to(tablet-screen) {
